@@ -1,0 +1,170 @@
+{
+  "apiVersion": "v1",
+  "items": [
+    {
+      "apiVersion": "v1",
+      "kind": "Route",
+      "metadata": {
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"route.openshift.io/v1\",\"kind\":\"Route\",\"metadata\":{\"annotations\":{\"openshift.io/host.generated\":\"true\"},\"labels\":{\"app\":\"git\"},\"name\":\"git\",\"namespace\":\"kpi-report\"},\"spec\":{\"host\":\"git-kpi-report.acps-alphad-r1.srv.volvo.com\",\"to\":{\"kind\":\"Service\",\"name\":\"git\",\"weight\":100},\"wildcardPolicy\":\"None\"}}\n",
+          "openshift.io/host.generated": "true"
+        },
+        "creationTimestamp": "2019-05-29T13:07:24Z",
+        "labels": {
+          "app": "git"
+        },
+        "name": "git",
+        "namespace": "kpi-report",
+        "resourceVersion": "4393366",
+        "selfLink": "/oapi/v1/namespaces/kpi-report/routes/git",
+        "uid": "b35f3215-8212-11e9-95a1-001a5a7318a4"
+      },
+      "spec": {
+        "host": "git-kpi-report.acps-alpha-r1.srv.volvo.com",
+        "to": {
+          "kind": "Service",
+          "name": "git",
+          "weight": 100
+        },
+        "wildcardPolicy": "None"
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "Route",
+      "metadata": {
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"route.openshift.io/v1\",\"kind\":\"Route\",\"metadata\":{\"annotations\":{\"openshift.io/host.generated\":\"true\"},\"labels\":{\"app\":\"kpi-deploy\"},\"name\":\"kpi-deploy\",\"namespace\":\"kpi-report\"},\"spec\":{\"host\":\"kpi-deploy-kpi-report.acps-alphad-r1.srv.volvo.com\",\"port\":{\"targetPort\":\"8080-tcp\"},\"to\":{\"kind\":\"Service\",\"name\":\"kpi-deploy\",\"weight\":100},\"wildcardPolicy\":\"None\"}}\n",
+          "openshift.io/host.generated": "true"
+        },
+        "creationTimestamp": "2019-05-29T13:07:24Z",
+        "labels": {
+          "app": "kpi-deploy"
+        },
+        "name": "kpi-deploy",
+        "namespace": "kpi-report",
+        "resourceVersion": "4393304",
+        "selfLink": "/oapi/v1/namespaces/kpi-report/routes/kpi-deploy",
+        "uid": "b361267b-8212-11e9-95a1-001a5a7318a4"
+      },
+      "spec": {
+        "host": "kpi-deploy-kpi-report.acps-alpha-r1.srv.volvo.com",
+        "port": {
+          "targetPort": "8080-tcp"
+        },
+        "to": {
+          "kind": "Service",
+          "name": "kpi-deploy",
+          "weight": 100
+        },
+        "wildcardPolicy": "None"
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "Route",
+      "metadata": {
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"route.openshift.io/v1\",\"kind\":\"Route\",\"metadata\":{\"annotations\":{\"openshift.io/host.generated\":\"true\"},\"labels\":{\"app\":\"kpi-premium\"},\"name\":\"kpi-premium\",\"namespace\":\"kpi-report\"},\"spec\":{\"alternateBackends\":[{\"kind\":\"Service\",\"name\":\"kpi-premium-db\",\"weight\":1}],\"host\":\"kpi-premium-kpi-report.acps-alphad-r1.srv.volvo.com\",\"port\":{\"targetPort\":\"8080-tcp\"},\"to\":{\"kind\":\"Service\",\"name\":\"kpi-premium-ardh\",\"weight\":1},\"wildcardPolicy\":\"None\"}}\n",
+          "openshift.io/host.generated": "true"
+        },
+        "creationTimestamp": "2019-05-29T13:07:24Z",
+        "labels": {
+          "app": "kpi-premium"
+        },
+        "name": "kpi-premium",
+        "namespace": "kpi-report",
+        "resourceVersion": "4393421",
+        "selfLink": "/oapi/v1/namespaces/kpi-report/routes/kpi-premium",
+        "uid": "b36287c6-8212-11e9-95a1-001a5a7318a4"
+      },
+      "spec": {
+        "alternateBackends": [
+          {
+            "kind": "Service",
+            "name": "kpi-premium-db",
+            "weight": 1
+          }
+        ],
+        "host": "kpi-premium-kpi-report.acps-alpha-r1.srv.volvo.com",
+        "port": {
+          "targetPort": "8080-tcp"
+        },
+        "to": {
+          "kind": "Service",
+          "name": "kpi-premium-ardh",
+          "weight": 1
+        },
+        "wildcardPolicy": "None"
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "Route",
+      "metadata": {
+        "annotations": {
+          "openshift.io/host.generated": "true"
+        },
+        "creationTimestamp": "2019-06-12T20:16:52Z",
+        "name": "kpi-report",
+        "namespace": "kpi-report",
+        "resourceVersion": "4398438",
+        "selfLink": "/oapi/v1/namespaces/kpi-report/routes/kpi-report",
+        "uid": "045ec277-8d4f-11e9-9e95-001a5a7318a2"
+      },
+      "spec": {
+        "host": "kpi-report-kpi-report.acps-alpha-r1.srv.volvo.com",
+        "path": "/jboss-helloworld",
+        "port": {
+          "targetPort": "8080-tcp"
+        },
+        "tls": {
+          "insecureEdgeTerminationPolicy": "Redirect",
+          "termination": "edge"
+        },
+        "to": {
+          "kind": "Service",
+          "name": "kpi-report",
+          "weight": 100
+        },
+        "wildcardPolicy": "None"
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "Route",
+      "metadata": {
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"route.openshift.io/v1\",\"kind\":\"Route\",\"metadata\":{\"annotations\":{\"openshift.io/host.generated\":\"true\"},\"labels\":{\"app\":\"kpi-standard\"},\"name\":\"kpi-standard\",\"namespace\":\"kpi-report\"},\"spec\":{\"host\":\"kpi-standard-kpi-report.acps-alphad-r1.srv.volvo.com\",\"port\":{\"targetPort\":\"8080-tcp\"},\"to\":{\"kind\":\"Service\",\"name\":\"kpi-standard\",\"weight\":100},\"wildcardPolicy\":\"None\"}}\n",
+          "openshift.io/host.generated": "true"
+        },
+        "creationTimestamp": "2019-05-29T13:07:24Z",
+        "labels": {
+          "app": "kpi-standard"
+        },
+        "name": "kpi-standard",
+        "namespace": "kpi-report",
+        "resourceVersion": "4393506",
+        "selfLink": "/oapi/v1/namespaces/kpi-report/routes/kpi-standard",
+        "uid": "b3649599-8212-11e9-95a1-001a5a7318a4"
+      },
+      "spec": {
+        "host": "kpi-standard-kpi-report.acps-alpha-r1.srv.volvo.com",
+        "port": {
+          "targetPort": "8080-tcp"
+        },
+        "to": {
+          "kind": "Service",
+          "name": "kpi-standard",
+          "weight": 100
+        },
+        "wildcardPolicy": "None"
+      }
+    }
+  ],
+  "kind": "List",
+  "metadata": {
+    "resourceVersion": "",
+    "selfLink": ""
+  }
+}

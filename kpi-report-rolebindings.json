@@ -1,0 +1,179 @@
+{
+  "apiVersion": "v1",
+  "items": [
+    {
+      "apiVersion": "v1",
+      "groupNames": null,
+      "kind": "RoleBinding",
+      "metadata": {
+        "creationTimestamp": "2019-05-29T13:06:09Z",
+        "name": "admin",
+        "namespace": "kpi-report",
+        "resourceVersion": "236508",
+        "selfLink": "/oapi/v1/namespaces/kpi-report/rolebindings/admin",
+        "uid": "871d004c-8212-11e9-a2c8-001a5a7318a3"
+      },
+      "roleRef": {
+        "name": "admin"
+      },
+      "subjects": [
+        {
+          "kind": "SystemUser",
+          "name": "system:admin"
+        }
+      ],
+      "userNames": [
+        "system:admin"
+      ]
+    },
+    {
+      "apiVersion": "v1",
+      "groupNames": null,
+      "kind": "RoleBinding",
+      "metadata": {
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"authorization.openshift.io/v1\",\"groupNames\":null,\"kind\":\"RoleBinding\",\"metadata\":{\"annotations\":{},\"name\":\"edit\",\"namespace\":\"kpi-report\"},\"roleRef\":{\"name\":\"edit\"},\"subjects\":[{\"kind\":\"ServiceAccount\",\"name\":\"prune\",\"namespace\":\"kpi-report\"}],\"userNames\":[\"system:serviceaccount:kpi-report:prune\"]}\n"
+        },
+        "creationTimestamp": "2019-05-29T13:06:09Z",
+        "name": "edit",
+        "namespace": "kpi-report",
+        "resourceVersion": "236509",
+        "selfLink": "/oapi/v1/namespaces/kpi-report/rolebindings/edit",
+        "uid": "871fb221-8212-11e9-a2c8-001a5a7318a3"
+      },
+      "roleRef": {
+        "name": "edit"
+      },
+      "subjects": [
+        {
+          "kind": "ServiceAccount",
+          "name": "prune",
+          "namespace": "kpi-report"
+        }
+      ],
+      "userNames": [
+        "system:serviceaccount:kpi-report:prune"
+      ]
+    },
+    {
+      "apiVersion": "v1",
+      "groupNames": null,
+      "kind": "RoleBinding",
+      "metadata": {
+        "annotations": {
+          "openshift.io/description": "Allows deploymentconfigs in this namespace to rollout pods in this namespace.  It is auto-managed by a controller; remove subjects to disable."
+        },
+        "creationTimestamp": "2019-05-29T12:51:35Z",
+        "name": "system:deployers",
+        "namespace": "kpi-report",
+        "resourceVersion": "233694",
+        "selfLink": "/oapi/v1/namespaces/kpi-report/rolebindings/system%3Adeployers",
+        "uid": "7db51d94-8210-11e9-b711-001a5a7318a2"
+      },
+      "roleRef": {
+        "name": "system:deployer"
+      },
+      "subjects": [
+        {
+          "kind": "ServiceAccount",
+          "name": "deployer",
+          "namespace": "kpi-report"
+        }
+      ],
+      "userNames": [
+        "system:serviceaccount:kpi-report:deployer"
+      ]
+    },
+    {
+      "apiVersion": "v1",
+      "groupNames": null,
+      "kind": "RoleBinding",
+      "metadata": {
+        "annotations": {
+          "openshift.io/description": "Allows builds in this namespace to push images to this namespace.  It is auto-managed by a controller; remove subjects to disable."
+        },
+        "creationTimestamp": "2019-05-29T12:51:35Z",
+        "name": "system:image-builders",
+        "namespace": "kpi-report",
+        "resourceVersion": "233693",
+        "selfLink": "/oapi/v1/namespaces/kpi-report/rolebindings/system%3Aimage-builders",
+        "uid": "7dace1da-8210-11e9-b711-001a5a7318a2"
+      },
+      "roleRef": {
+        "name": "system:image-builder"
+      },
+      "subjects": [
+        {
+          "kind": "ServiceAccount",
+          "name": "builder",
+          "namespace": "kpi-report"
+        }
+      ],
+      "userNames": [
+        "system:serviceaccount:kpi-report:builder"
+      ]
+    },
+    {
+      "apiVersion": "v1",
+      "groupNames": [
+        "system:serviceaccounts:kpi-report"
+      ],
+      "kind": "RoleBinding",
+      "metadata": {
+        "annotations": {
+          "openshift.io/description": "Allows all pods in this namespace to pull images from this namespace.  It is auto-managed by a controller; remove subjects to disable."
+        },
+        "creationTimestamp": "2019-05-29T12:51:34Z",
+        "name": "system:image-pullers",
+        "namespace": "kpi-report",
+        "resourceVersion": "233672",
+        "selfLink": "/oapi/v1/namespaces/kpi-report/rolebindings/system%3Aimage-pullers",
+        "uid": "7d9038b7-8210-11e9-b711-001a5a7318a2"
+      },
+      "roleRef": {
+        "name": "system:image-puller"
+      },
+      "subjects": [
+        {
+          "kind": "SystemGroup",
+          "name": "system:serviceaccounts:kpi-report"
+        }
+      ],
+      "userNames": null
+    },
+    {
+      "apiVersion": "v1",
+      "groupNames": null,
+      "kind": "RoleBinding",
+      "metadata": {
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"authorization.openshift.io/v1\",\"groupNames\":null,\"kind\":\"RoleBinding\",\"metadata\":{\"annotations\":{},\"name\":\"view\",\"namespace\":\"kpi-report\"},\"roleRef\":{\"name\":\"view\"},\"subjects\":[{\"kind\":\"ServiceAccount\",\"name\":\"git\",\"namespace\":\"kpi-report\"}],\"userNames\":[\"system:serviceaccount:kpi-report:git\"]}\n"
+        },
+        "creationTimestamp": "2019-05-29T13:06:10Z",
+        "name": "view",
+        "namespace": "kpi-report",
+        "resourceVersion": "236512",
+        "selfLink": "/oapi/v1/namespaces/kpi-report/rolebindings/view",
+        "uid": "872adc27-8212-11e9-a2c8-001a5a7318a3"
+      },
+      "roleRef": {
+        "name": "view"
+      },
+      "subjects": [
+        {
+          "kind": "ServiceAccount",
+          "name": "git",
+          "namespace": "kpi-report"
+        }
+      ],
+      "userNames": [
+        "system:serviceaccount:kpi-report:git"
+      ]
+    }
+  ],
+  "kind": "List",
+  "metadata": {
+    "resourceVersion": "",
+    "selfLink": ""
+  }
+}
